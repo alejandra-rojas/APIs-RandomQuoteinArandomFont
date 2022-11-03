@@ -23,7 +23,7 @@ main {
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
   align-items: center;
   justify-content: center;
 }
@@ -51,4 +51,10 @@ div {
   text-transform: lowercase;
   font-size: 0.8rem;
   margin: 10px 0 200px;
+}
+
+@media screen and (min-width: 620px) {
+  main {
+    margin: 150px auto 0;
+  }
 }
