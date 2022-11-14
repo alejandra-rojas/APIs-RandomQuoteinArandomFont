@@ -19,6 +19,7 @@ getQuote();
 const API_KEY = 'AIzaSyDrY4frGeOBeZYuG0TNyEPD-389RVi3DGA';
 let fontsList = [];
 const textHolder = document.querySelector(".quote");
+const  named = document.querySelector(".font")
 
 
 async function loadFontsList() {
@@ -47,19 +48,21 @@ function updateFont(textHolder, randomFont) {
   textHolder.style.fontFamily = randomFont;  
 } 
 
+function typeSelectedFont(named, randomFont){
+  named = document.querySelector(".font");
+  named.innerHTML = `Typed in: ${randomFont}`;
+}
+
 
 async function randomizeFont() {
     fontsList = await loadFontsList();
     const randomFont = loadRandomFont(fontsList);
     updateFont(textHolder, randomFont);
-    
-    const name = document.createElement('div');
-    name.innerHTML = `typed in: ${randomFont}`;
-    name.className = "font";
-    main.append(name);
-    
+    typeSelectedFont(named, randomFont);
 }
 randomizeFont();
+
+
 
 
 
