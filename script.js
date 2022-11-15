@@ -13,7 +13,7 @@ async function getQuote() {
   const animeHolder = document.getElementById("quote-anime");
   animeHolder.innerHTML = data.character;
   }
-getQuote(); 
+await getQuote(); 
 
 // Random Google Font
 const API_KEY = 'AIzaSyDrY4frGeOBeZYuG0TNyEPD-389RVi3DGA';
